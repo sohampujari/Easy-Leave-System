@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Easy Leave Dashboard</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f9fa;
+      color: #495057;
+    }
+
+    nav {
+      background-color: black;
+      /* Updated to green color */
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav h1 {
+      margin: 0;
+      color: white;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      margin: 0 10px;
+    }
+
+    .container {
+      margin: 20px;
+    }
+
+    .section {
+      background-color: #ffffff;
+      /* Updated to white */
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s;
+      cursor: pointer;
+    }
+
+    .section:hover {
+      background-color: #f0f0f0;
+      /* Slightly lighter shade on hover */
+    }
+
+    .section h2 {
+      color: black;
+      /* Updated to black color */
+      transition: color 0.3s;
+    }
+
+    .section:hover h2 {
+      color: black;
+      /* Slightly darker shade on hover */
+    }
+
+    .section i {
+      font-size: 24px;
+      margin-right: 10px;
+      color: #4CAF50;
+      /* Updated to green color */
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <h1>Easy Leave Dashboard</h1>
+    <a href="/"><i class="fas fa-sign-out-alt"></i> Logout</a>
+  </nav>
+
+  <div class="container">
+
+    <div class="section" onclick="navigateToGeneralLeave()">
+      <h2><i class="fas fa-calendar" style="color: #4CAF50;"></i> General Leave</h2>
+      <!-- General Leave content goes here -->
+    </div>
+
+    <div class="section" onclick="navigateToEmergencyLeave()">
+      <h2><i class="fas fa-exclamation-circle" style="color: #4CAF50;"></i> Emergency Leave</h2>
+      <!-- Emergency Leave content goes here -->
+    </div>
+
+
+  </div>
+
+  <script>
+    function navigateToGeneralLeave() {
+      window.location.href = '/general_leave';
+    }
+
+    function navigateToEmergencyLeave() {
+      window.location.href = '/emergency_leave';
+    }
+
+    function navigateToRequests() {
+      // Add your logic to navigate to the Requests page
+      window.location.href = '/requests';
+    }
+
+
+
+
+  </script>
+
+</body>
+
+</html>
